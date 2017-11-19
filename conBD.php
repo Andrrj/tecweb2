@@ -26,6 +26,7 @@ public function executar($sql){
 	}
 
 	echo $sql;
+
 	$count = $this->dbh->exec($sql);
 
 	return $count;
@@ -39,5 +40,16 @@ public function executar($sql){
 //PDO::query — Executes an SQL statement,returning a result set as a PDOStatement object
 		return $this->dbh->query($sql) ;
 	}
+
+	public function batata($sql){
+		if (empty($sql)) {
+			echo "sql em branco";
+			return false;
+		}
+//PDO::query — Executes an SQL statement,returning a result set as a PDOStatement object
+		return $this->dbh->query($sql) ;
+
+	}
+
 }
 ?>

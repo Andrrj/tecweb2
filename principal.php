@@ -1,10 +1,10 @@
 <?php
 require 'ValAcess.php';
 $val = new validacao();
-$val->validaradmin();
+$val->validargeral();
 $_SESSION['TABELA']=NULL;
 
-echo "<h3>Usuário x | Perfil Y | SAIR</h3>
+echo "<h3>Usuário ".$_SESSION['login']." | Perfil Y | SAIR</h3>
       <h1>Acesso do Perfil
       Relação de Acessos por Usuário.
       </h1>
